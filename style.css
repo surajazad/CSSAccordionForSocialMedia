@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+body{
+    background-color: #222;
+    font-family: Arial,Helvetica,sans-serif;
+    
+}
+
+.container{
+    margin: 50px auto;
+    width: 90%;
+}
+
+.header h1{
+    color:white;
+    margin-bottom: 10x;
+    text-align: center;
+}
+
+.accordion{
+    background: #333;
+    width: 100%;
+    min-width: 800px;
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    height: 200px;
+    font-size: 0;
+}
+
+.tab{
+    display: inline-block;
+    background-color: #444;
+    border-right: #333 solid 1x;
+    width: 80px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition:all 0.5s ease-in-out 0.1s;
+}
+
+.tab:hover{
+    width: 450px;
+}
+
+.tab:hover .social a:before{
+    margin-left: -100px;
+}
+
+.tab:hover .social a:after{
+    margin-left: -5px;
+}
+
+.tab .content{
+    background: white;
+    width: 360px;
+    height: 200px;
+    margin-left: 80px;
+    position: relative;
+    padding: 50px 0 0 15px;
+}
+
+.tab .content h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tab .content p{
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-right: 30px;
+}
+
+
+.youtube a:before,
+.youtube a:after{
+    content: 'Y';
+}
+
+.youtube a:after{
+    background-color: red;
+}
+
+twitter a:before,
+.twitter a:after{
+    content: 'T';
+}
+
+.twitter a:after{
+    background-color: #6dc5dd;
+}
+
+facebook a:before,
+.facebook a:after{
+    content: 'F';
+}
+
+.facebook a:after{
+    background-color: #3b5998;
+}
+
+.social a:before,
+.social a:after{
+    transition: all 0.4s ease-in-out 0.1s;
+    width: 80px;
+    height: 200px;
+    position: absolute;
+    text-indent: 0;
+    padding-top: 90px;
+    padding-left: 25px;
+    display: block;
+    font : normal 30px;
+    color :white;
+}
+.social a:after{
+    font-size: 48px;
+    padding-left:20px;
+    padding-top: 80px;
+    margin-left: 85px;
+}
+
+@media(max-width:950px){
+    
+    .container{
+        width: 70%;
+    }
+    
+    .tab{
+        display: block;
+        width: 100%;
+        border-bottom: 3px #333 solid;
+    }
+    .accordion {
+        display: block;
+        min-width: 450px;
+        height: auto;
+    }
+    
+    .tab .content{
+        widht : 85%;
+    }
+    
+    .tab:hover{
+        width: 100%;
+    }
+    
+}
+
+@media(max-width : 680px){
+    
+    .container {
+        width: 95%;
+    }
+    .accordion{
+        width: 100px;
+        min-width: 350px;
+    }
+}
